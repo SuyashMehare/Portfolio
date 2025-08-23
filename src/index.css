@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+/* Ensure proper stacking context */
+nav {
+  z-index: 1000 !important;
+}
+
+section {
+  position: relative;
+  z-index: 1;
+} */
+
+/* For any absolute positioned elements in sections */
+section > div:not(nav) {
+  z-index: 2;
+}
+
+/* Light theme specific fixes for Skills section */
+/* Light theme specific fixes for Skills section */
+/* .light-theme-fix .skills-card {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+.light-theme-fix .skills-text {
+  color: #374151 !important;
+  font-weight: 600 !important;
+}
+
+.light-theme-fix .skills-button {
+  background-color: #f3f4f6 !important;
+  color: #4b5563 !important;
+}
+
+.light-theme-fix .skills-button:hover {
+  background-color: #e5e7eb !important;
+  color: #374151 !important;
+} */
