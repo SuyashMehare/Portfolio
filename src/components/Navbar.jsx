@@ -163,17 +163,17 @@ function Navbar({ darkMode, setDarkMode }) {
         
 
         <a
-          href="https://drive.google.com/file/d/1C19c-GmUWzXv4ebhgGqAPa7z2_wLhNim/view?usp=sharing"
+          href="https://drive.google.com/file/d/1_NgObOyshx1fSduwY7OOjLWRWcjKemNc/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className={`flex items-center gap-2 px-4 py-2 rounded-full font-medium transition-all duration-300 ${darkMode ? themeVariables.darkResume : themeVariables.lightResume}`}
           onClick={(e) => {
             // Open the PDF in a new tab
-            window.open("https://drive.google.com/file/d/1C19c-GmUWzXv4ebhgGqAPa7z2_wLhNim/view?usp=sharing", "_blank");
+            window.open("https://drive.google.com/file/d/1_NgObOyshx1fSduwY7OOjLWRWcjKemNc/view?usp=sharing", "_blank");
 
             // Trigger download in the background
             const downloadLink = document.createElement("a");
-            downloadLink.href = "https://drive.google.com/uc?export=download&id=1C19c-GmUWzXv4ebhgGqAPa7z2_wLhNim";
+            downloadLink.href = "https://drive.google.com/uc?export=download&id=1_NgObOyshx1fSduwY7OOjLWRWcjKemNc";
             downloadLink.download = "Suyash_Mehare_Resume.pdf";
             document.body.appendChild(downloadLink);
             downloadLink.click();

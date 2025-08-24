@@ -1,11 +1,11 @@
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaFileDownload, FaPaperPlane } from 'react-icons/fa';
 import { useState } from 'react';
 //bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900
-const darkComponent = "bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900"
-const lightComponent = "bg-gradient-to-br from-blue-50 to-indigo-100 from-gray-800 to-gray-900"
+const lightComponent= "bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900"
+const darkComponent = "bg-gradient-to-br from-blue-50 to-indigo-100 from-gray-800 to-gray-900"
 
 
-const Contact = ({darkMode}) => {
+const Contact = ({ darkMode }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -38,7 +38,7 @@ const Contact = ({darkMode}) => {
         {/* Contact Information */}
         <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl">
           <h2 className="text-3xl font-bold mb-8 text-center text-gray-800 dark:text-white">Get in Touch</h2>
-          
+
           <div className="space-y-6 mb-8">
             <div className="flex items-center space-x-4 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
               <div className="p-3 bg-blue-100 dark:bg-blue-800 rounded-full">
@@ -93,11 +93,25 @@ const Contact = ({darkMode}) => {
 
           <div className="text-center">
             <a
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/1_NgObOyshx1fSduwY7OOjLWRWcjKemNc/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              download
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all transform hover:scale-105 shadow-md"
+              onClick={(e) => {
+                // Open the PDF in a new tab
+                window.open("https://drive.google.com/file/d/1_NgObOyshx1fSduwY7OOjLWRWcjKemNc/view?usp=sharing", "_blank");
+
+                // Trigger download in the background
+                const downloadLink = document.createElement("a");
+                downloadLink.href = "https://drive.google.com/uc?export=download&id=1_NgObOyshx1fSduwY7OOjLWRWcjKemNc";
+                downloadLink.download = "Suyash_Mehare_Resume.pdf";
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+                document.body.removeChild(downloadLink);
+
+                // Prevent default link behavior
+                e.preventDefault();
+              }}
             >
               <FaFileDownload className="mr-2" />
               Download Resume
@@ -108,7 +122,7 @@ const Contact = ({darkMode}) => {
         {/* Contact Form */}
         <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl">
           <h3 className="text-2xl font-bold mb-6 text-center text-gray-800 dark:text-white">Send me a message</h3>
-          
+
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
