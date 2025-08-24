@@ -46,7 +46,7 @@ const Contact = ({darkMode}) => {
               </div>
               <div>
                 <p className="font-semibold text-gray-700 dark:text-gray-300">Email</p>
-                <p className="text-blue-600 dark:text-blue-400">xxxx08@gmail.com</p>
+                <p className="text-blue-600 dark:text-blue-400">suyashmehare04@gmail.com</p>
               </div>
             </div>
 
@@ -56,7 +56,7 @@ const Contact = ({darkMode}) => {
               </div>
               <div>
                 <p className="font-semibold text-gray-700 dark:text-gray-300">Phone</p>
-                <p className="text-green-600 dark:text-green-400">xxxx</p>
+                <p className="text-green-600 dark:text-green-400">8999942176</p>
               </div>
             </div>
 
@@ -66,7 +66,7 @@ const Contact = ({darkMode}) => {
               </div>
               <div>
                 <p className="font-semibold text-gray-700 dark:text-gray-300">Location</p>
-                <p className="text-purple-600 dark:text-purple-400">City, State</p>
+                <p className="text-purple-600 dark:text-purple-400">Amravati, Maharashtra</p>
               </div>
             </div>
           </div>
